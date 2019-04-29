@@ -7,15 +7,16 @@ body
   width: 100vw;
   height: 100vh;
 
+  font-family: 'Raleway', sans-serif;
+
+  overflow: hidden;
   margin: 0;
 }
 
 .header
 {
-  display: flex;
-
   color: #434343;
-  font-family: 'Raleway', sans-serif;
+  margin: 0 0 10px 0;
 }
 
 p.hpj
@@ -28,7 +29,7 @@ p.hpj
   font-weight: 700;
   font-size: calc(12px + 2vw + 2vh);
 
-  margin-left: 4vw;
+  margin: 2vw 0 0 4vw;
   word-spacing: 100vw;
 }
 
@@ -44,6 +45,85 @@ p.hpj
   height: calc(11px + 1vw);;
 
   margin: 6px;
+}
 
-  cursor: pointer;
+.timeline
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 100%;
+  height: auto;
+
+  margin: 10px 0 0 0;
+}
+
+.separator
+{
+  flex-basis: 100%;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  top: -1px;
+  height: auto;
+}
+
+.separator::after
+{
+  display: block;
+  content: "";
+
+  width: 5px;
+  height: 50px;
+
+  background-color: #434343;
+}
+
+.circle
+{
+  position: relative;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  top: -1px;
+  width: 60px;
+  height: 60px;
+
+  box-sizing: border-box;
+
+  border: #434343 5px solid;
+  border-radius: 50%;
+}
+
+.circle > .icon
+{
+  width: 60%;
+  height: 60%;
+}
+
+.circleDescription
+{
+  position: absolute;
+
+  top: 0;
+  left: 100%;
+  width: max-content;
+  height: auto;
+
+  margin: 0 0 0 20px;
+}
+
+.circleDescription.left
+{
+  left: -100%;
+}
+
+.circleDescription > p
+{
+  margin: auto;
 }

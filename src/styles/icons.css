@@ -4,15 +4,19 @@
   stroke: none;
 }
 
-.icon.hpj
+.icon.link
 {
-  width: 12vw;
-  height: 9vh;
+  cursor: pointer;
 }
 
 .icon.discord:hover
 {
-  fill: #7289DA; 
+  fill: #7289DA;
+}
+
+.icon.gitlab:hover
+{
+  fill: #E24329;
 }
 
 .icon.patreon:hover
