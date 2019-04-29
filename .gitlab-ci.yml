@@ -1,13 +1,19 @@
-# This file is a template, and might need editing before it works on your project.
-# Full project: https://gitlab.com/pages/plain-html
+cache:
+  paths:
+  - node_modules
+
 pages:
   stage: deploy
+  image: node:slim
   script:
-  - mkdir .public
-  - cp -r * .public
-  - mv .public public
+  # install dependencies & compile the code
+  - "npm install"
+  - "npm run compile"
+
+  - "mkdir public"
+  - "cp -r compiled/* public"
   artifacts:
     paths:
     - public
   only:
-  - master
+    - master

@@ -1,0 +1,41 @@
+{
+  "name": "herpproject.gitlab.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "npx pug src --out compiled --pretty --watch & npx webpack-dev-server --mode development --watch --hot",
+    "pug": "npx pug src --out compiled --pretty",
+    "pack": "webpack --mode production",
+    "compile": "npm run pug && npm run pack"
+  },
+  "homepage": "https://gitlab.com/herpproject/herpproject.gitlab.io#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/herpproject/herpproject.gitlab.io.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/herpproject/herpproject.gitlab.io/issues"
+  },
+  "author": "Herp Project",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.3",
+    "eslint": "^5.16.0",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-lint": "^2.5.0",
+    "pug-lint-config-clock": "^2.0.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1",
+    "write-file-webpack-plugin": "^4.5.0"
+  }
+}
