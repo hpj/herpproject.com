@@ -5,10 +5,12 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "npx pug src --out compiled --pretty --watch & npx webpack-dev-server --mode development --watch --hot",
+    "svgo": "svgo --config='{ \"plugins\": [ { \"removeAttrs\": { \"attrs\": \"(fill|stroke)\" } } ] }' ./assets",
+    "sprite": "create-svg-sprite --input ./assets --output ./compiled",
+    "dev": "npm run sprite & npx pug src --out compiled --pretty --watch & npx webpack-dev-server --mode development --watch --hot",
     "pug": "npx pug src --out compiled --pretty",
     "pack": "webpack --mode production",
-    "compile": "npm run pug && npm run pack"
+    "compile": "npm run svgo && npm run sprite && npm run pug && npm run pack"
   },
   "homepage": "https://gitlab.com/herpproject/herpproject.gitlab.io#readme",
   "repository": {
@@ -28,6 +30,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^5.0.3",
+    "create-svg-sprite": "^1.0.4",
     "eslint": "^5.16.0",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",

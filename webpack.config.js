@@ -35,6 +35,7 @@ module.exports = {
         from: 'src/styles',
         to: 'styles',
         force: true
+        
       }
     ]),
     new WriteFilePlugin([

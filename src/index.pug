@@ -1,14 +1,28 @@
 doctype html
 
+mixin icon(name, link)
+  svg.icon(class=name, onclick='window.open(\'' + link + '\', \'_blank\');')
+    use(xlink:href=`./icons.svg#${name}`)
+
 html(lang='en')
   head
-    title Title
+    title Herp Project
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
     
-    link(rel='stylesheet' href='./styles/test.css')
+    link(rel='stylesheet' href='./styles/body.css')
+    link(rel='stylesheet' href='./styles/icons.css')
 
     script(src='./bundle.js')
 
   body
+    .header
+      p.hpj Herp Project
+      +icon('hpj')
+    .links
+      +icon('discord', 'https://discord.gg/8SQsRxD')
+      +icon('patreon', 'https://www.patreon.com/hpj')
+      +icon('twitch', 'https://www.twitch.tv/herpproject')
+      +icon('twitter', 'https://www.twitter.com/herpproject')
+      +icon('youtube', 'https://youtube.com/channel/UCb5CUVUiD04nNluXVkmF6Pg')

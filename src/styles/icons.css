@@ -1,0 +1,36 @@
+.icon
+{
+  fill: #434343; 
+  stroke: none;
+}
+
+.icon.hpj
+{
+  width: 12vw;
+  height: 9vh;
+}
+
+.icon.discord:hover
+{
+  fill: #7289DA; 
+}
+
+.icon.patreon:hover
+{
+  fill: #F96854; 
+}
+
+.icon.twitch:hover
+{
+  fill: #6441A4; 
+}
+
+.icon.twitter:hover
+{
+  fill: #1DA1F2; 
+}
+
+.icon.youtube:hover
+{
+  fill: #FF0000; 
+}
