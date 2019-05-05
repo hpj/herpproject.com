@@ -23,7 +23,6 @@ html(lang='en')
   body
     .header
       p.hpj Herp Project
-      //- +icon('hpj')
     .links
       +iconLink('discord', 'https://discord.gg/8SQsRxD')
       +iconLink('gitlab', 'https://gitlab.com/herpproject')
@@ -32,16 +31,37 @@ html(lang='en')
       +iconLink('twitter', 'https://www.twitter.com/herpproject')
       +iconLink('youtube', 'https://youtube.com/channel/UCb5CUVUiD04nNluXVkmF6Pg')
     .timeline
-      .circle
-        +icon('hpj')
-        .circleDescription
-          p(style={'font-weight': '700'}) Founded July 2015
-          p by Kerolos Zaki
-      .separator
-      .circle
-        +iconLink('gitlab', 'https://gitlab.com/herpproject/Dawayer')
-        .circleDescription
-          p(style={'font-weight': '700'}) Released March 2019
-          p Dawayer
-      .separator
+      .timelineItemIcon
+        .box
+          +icon('hpj')
+      .timelineItemText
+        .separator
+          .timelineItemTitle Founded July 2015
+          .timelineItemDescription by Kerolos Zaki
+      
+      .timelineItemIcon
+        .circle
+          +iconLink('gitlab', 'https://gitlab.com/herpproject/Dawayer')
+      .timelineItemText
+        .separator
+          .timelineItemTitle Released March 2019
+          .timelineItemDescription Dawayer
+      
+      .timelineItemIcon
+        .circle
+          +icon('webtoon')
+      .timelineItemText
+        .separator
+          .timelineItemTitle Coming Soon
+          .timelineItemDescription The Story So Far
+      
+      .timelineItemIcon
+        .circle
+          +icon('gitlab')
+      .timelineItemText
+        .separator
+          .timelineItemTitle Coming Soon
+          .timelineItemDescription Sulaiman
+
+
 

@@ -9,14 +9,16 @@ body
 
   font-family: 'Raleway', sans-serif;
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: overlay;
+
   margin: 0;
 }
 
 .header
 {
   color: #434343;
-  margin: 0 0 10px 0;
+  margin: 2vh 0 2vh 2vw;
 }
 
 p.hpj
@@ -29,22 +31,27 @@ p.hpj
   font-weight: 700;
   font-size: calc(12px + 2vw + 2vh);
 
-  margin: 2vw 0 0 4vw;
+  margin: 0;
   word-spacing: 100vw;
 }
 
 .links
 {
   display: flex;
-  margin-left: 4vw;
+  margin: 2vh 0 2vh 2vw;
 }
 
 .links > *
 {
-  width: calc(11px + 1vw);
-  height: calc(11px + 1vw);;
+  min-width: 12px;
+  max-width: 16px;
+  min-height: 12px;
+  max-height: 16px;
 
-  margin: 6px;
+  width: 3vw;
+  height: 3vw;
+
+  margin: 0 6px;
 }
 
 .timeline
@@ -52,78 +59,74 @@ p.hpj
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  width: 100%;
-  height: auto;
-
-  margin: 10px 0 0 0;
 }
 
-.separator
+.timelineItemIcon,
+.timelineItemText
 {
   flex-basis: 100%;
-
   display: flex;
-  position: relative;
   justify-content: center;
-
-  top: -1px;
-  height: auto;
 }
 
-.separator::after
+.circle,
+.box
 {
-  display: block;
-  content: "";
-
-  width: 5px;
-  height: 50px;
-
-  background-color: #434343;
-}
-
-.circle
-{
-  position: relative;
   display: flex;
 
   justify-content: center;
   align-items: center;
 
-  top: -1px;
-  width: 60px;
-  height: 60px;
+  min-width: 46px;
+  max-width: 54px;
+  min-height: 46px;
+  max-height: 54px;
+
+  width: calc(5vw + 3vh);
+  height: calc(5vw + 3vh);
 
   box-sizing: border-box;
 
   border: #434343 5px solid;
+}
+
+.circle
+{
   border-radius: 50%;
 }
 
-.circle > .icon
+.circle > .icon,
+.box > .icon
 {
   width: 60%;
   height: 60%;
 }
 
-.circleDescription
+.separator
 {
-  position: absolute;
+  position: relative;
 
-  top: 0;
-  left: 100%;
-  width: max-content;
+  background-color: #434343;
+
+  width: 5px;
   height: auto;
 
-  margin: 0 0 0 20px;
+  padding: 10px 0;
 }
 
-.circleDescription.left
+.timelineItemTitle,
+.timelineItemDescription
 {
-  left: -100%;
+  position: relative;
+
+  font-size: calc(9px + 0.5vw + 0.5vh);
+
+  left: 24px;
+  width: calc(50vw - 10px);
+  height: max-content;
 }
 
-.circleDescription > p
+.timelineItemTitle
 {
-  margin: auto;
+  font-weight: 700;
 }

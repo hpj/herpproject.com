@@ -34,6 +34,11 @@
   fill: #1DA1F2; 
 }
 
+.icon.webtoon:hover
+{
+  fill: #00D564;
+}
+
 .icon.youtube:hover
 {
   fill: #FF0000; 
