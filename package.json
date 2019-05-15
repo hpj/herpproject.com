@@ -1,5 +1,5 @@
 {
-  "name": "herpproject.gitlab.io",
+  "name": "hpj.gitlab.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,13 +12,13 @@
     "pack": "webpack --mode production",
     "compile": "npm run svgo && npm run sprite && npm run pug && npm run pack"
   },
-  "homepage": "https://gitlab.com/herpproject/herpproject.gitlab.io#readme",
+  "homepage": "https://gitlab.com/hpj/hpj.gitlab.io#readme",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/herpproject/herpproject.gitlab.io.git"
+    "url": "git+ssh://git@gitlab.com/hpj/hpj.gitlab.io.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/herpproject/herpproject.gitlab.io/issues"
+    "url": "https://gitlab.com/hpj/hpj.gitlab.io/issues"
   },
   "author": "Herp Project",
   "license": "MIT",
