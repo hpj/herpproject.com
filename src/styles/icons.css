@@ -9,37 +9,37 @@
   cursor: pointer;
 }
 
-.icon.discord:hover
+.icon.link.discord:hover
 {
   fill: #7289DA;
 }
 
-.icon.gitlab:hover
+.icon.link.gitlab:hover
 {
   fill: #E24329;
 }
 
-.icon.patreon:hover
+.icon.link.patreon:hover
 {
   fill: #F96854; 
 }
 
-.icon.twitch:hover
+.icon.link.twitch:hover
 {
   fill: #6441A4; 
 }
 
-.icon.twitter:hover
+.icon.link.twitter:hover
 {
   fill: #1DA1F2; 
 }
 
-.icon.webtoon:hover
+.icon.link.webtoon:hover
 {
   fill: #00D564;
 }
 
-.icon.youtube:hover
+.icon.link.youtube:hover
 {
   fill: #FF0000; 
 }
