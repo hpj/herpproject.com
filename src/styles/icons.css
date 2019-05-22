@@ -24,6 +24,11 @@
   fill: #F96854; 
 }
 
+.icon.link.teespring:hover
+{
+  fill: #39ACE6; 
+}
+
 .icon.link.twitch:hover
 {
   fill: #6441A4; 
