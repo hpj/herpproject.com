@@ -23,16 +23,14 @@ body
 
 p.hpj
 {
-  flex-grow: 1;
-  display: flex;
+  word-spacing: 100vw;
 
-  align-items: center;
+  width: min-content;
 
   font-weight: 700;
   font-size: calc(12px + 2vw + 2vh);
-
+  
   margin: 0;
-  word-spacing: 100vw;
 }
 
 .links
