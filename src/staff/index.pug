@@ -1,0 +1,28 @@
+extends ../layout.pug
+
+append head
+  title Herp Project | Timeline
+
+  link(rel='stylesheet' href='../styles/body.css')
+  link(rel='stylesheet' href='../styles/icons.css')
+  link(rel='stylesheet' href='../styles/staff.css')
+
+append content
+  .staff.container
+    .staff.title Full-time Staff
+    .staffMember.container
+      .staffMember.box
+        img(src='https://secure.gravatar.com/avatar/598c0ee957703632c65a68458031149f' alt='Kerolos Zaki')
+      .links.container
+        +iconLink('twitter', 'https://www.twitter.com/ker0olos')
+      .staffMember.info
+        p Kerolos Zaki
+        p Founder,
+        p Leader of The Committee,
+        p Programmer, Architect, Writer, Designer.
+        p Since July 2015
+      .staffMember.projects
+        p Dawayer (Developer)
+        p Sulaiman (Developer)
+        p Fabric (Developer)
+        p The Story So Far (Writer)

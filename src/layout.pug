@@ -18,9 +18,11 @@ html(lang='en')
 
   body
     block content
-      .header
-        p.hpj Herp Project
-      .links
+      .header.container
+        .header.title Herp Project
+        a.header.item(href='../projects') Projects
+        a.header.item(href='../staff') Staff
+      .links.container
         +iconLink('discord', 'https://discord.gg/8SQsRxD')
         +iconLink('gitlab', 'https://gitlab.com/hpj')
         +iconLink('patreon', 'https://www.patreon.com/hpj')

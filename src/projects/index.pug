@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+append head
+  title Herp Project | Projects
+
+  link(rel='stylesheet' href='../styles/body.css')
+  link(rel='stylesheet' href='../styles/icons.css')
+  link(rel='stylesheet' href='../styles/projects.css')
+
+append content
+  .projects.container
+    .project.container
+      .project.circle
+        +iconLink('gitlab', 'https://gitlab.com/hpj/Dawayer')
+      .project.info
+        p Dawayer
+        p Released March 2019
+    .project.container
+      .project.circle
+        +iconLink('gitlab', 'https://gitlab.com/hpj/Sulaiman')
+      .project.info
+        p Sulaiman
+        p Released May 2019
+    .project.container
+      .project.circle
+        +icon('webtoon')
+      .project.info
+        p The Story So Far
+        p Coming Soon(ish)
+    .project.container
+      .project.circle
+        +icon('gitlab')
+      .project.info
+        p Fabric
+        p Somewhere in 2020...
+        p Probably...

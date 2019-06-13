@@ -1,0 +1,60 @@
+.staff.container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.staff.title
+{
+  flex-basis: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  color: var(--foreground);
+
+  font-weight: 700;
+  font-size: calc(11px + 0.6vw + 0.6vh);
+  
+  margin: 2vh 0 2vh 2vw;
+}
+
+.staffMember.container
+{
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "circle info" "links projects";
+  grid-column-gap: 24px;
+
+  margin: 2vh 2vw 2vh 2vw;
+}
+
+.staffMember.container > .links.container
+{
+  justify-content: center;
+  margin: 0;
+}
+
+.staffMember.circle
+{
+  grid-area: circle;
+}
+
+.staffMember.info
+{
+  grid-area: info;
+  font-weight: 700;
+}
+
+.staffMember.projects
+{
+  grid-area: projects;
+}
+
+.staffMember.info > p,
+.staffMember.projects > p
+{
+  margin: 0;
+}

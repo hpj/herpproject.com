@@ -1,0 +1,39 @@
+.projects.container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 700px;
+  margin: auto;
+}
+
+.project.container
+{
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "circle info" "links info";
+  grid-column-gap: 24px;
+
+  width: 250px;
+  height: auto;
+
+  margin: 2vh 2vw 2vh 2vw;
+}
+
+.project.circle
+{
+  grid-area: circle;
+}
+
+.project.info
+{
+  grid-area: info;
+  font-weight: 700;
+}
+
+.project.info > p
+{
+  margin: 0;
+}
