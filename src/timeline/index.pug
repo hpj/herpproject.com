@@ -1,0 +1,50 @@
+extends ../layout.pug
+
+append head
+  title Herp Project | Timeline
+
+  link(rel='stylesheet' href='../styles/body.css')
+  link(rel='stylesheet' href='../styles/icons.css')
+
+append content
+  .timeline
+    .timelineItemIcon
+      .box
+        +icon('hpj')
+    .timelineItemText
+      .separator
+        .timelineItemTitle Founded July 2015
+        .timelineItemDescription by Kerolos Zaki
+
+    .timelineItemIcon
+      .circle
+        +iconLink('gitlab', 'https://gitlab.com/hpj/Dawayer')
+    .timelineItemText
+      .separator
+        .timelineItemTitle Released March 2019
+        .timelineItemDescription Dawayer
+
+    .timelineItemIcon
+      .circle
+        +iconLink('gitlab', 'https://gitlab.com/hpj/Sulaiman')
+    .timelineItemText
+      .separator
+        .timelineItemTitle Released May 2019
+        .timelineItemDescription Sulaiman
+
+    .timelineItemIcon
+      .circle
+        +icon('webtoon')
+    .timelineItemText
+      .separator
+        .timelineItemTitle Coming Soon(ish)
+        .timelineItemDescription The Story So Far
+
+    .timelineItemIcon
+      .circle
+        +icon('gitlab')
+    .timelineItemText
+      .separator
+        .timelineItemTitle Somewhere in 2020...
+        .timelineItemTitle Probably...
+        .timelineItemDescription Fabric

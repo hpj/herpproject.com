@@ -1,0 +1,30 @@
+doctype html
+
+mixin icon(name)
+  svg.icon(class=name)
+    use(xlink:href=`../icons.svg#${name}`)
+
+mixin iconLink(name, link)
+  a(href=link)
+    svg.icon.link(class=name)
+      use(xlink:href=`../icons.svg#${name}`)
+
+html(lang='en')
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      meta(http-equiv='X-UA-Compatible' content='ie=edge')
+
+  body
+    block content
+      .header
+        p.hpj Herp Project
+      .links
+        +iconLink('discord', 'https://discord.gg/8SQsRxD')
+        +iconLink('gitlab', 'https://gitlab.com/hpj')
+        +iconLink('patreon', 'https://www.patreon.com/hpj')
+        +iconLink('teespring', 'https://teespring.com/stores/hpj')
+        +iconLink('twitch', 'https://www.twitch.tv/herpproject')
+        +iconLink('twitter', 'https://www.twitter.com/herpproject')
+        +iconLink('youtube', 'https://youtube.com/channel/UCb5CUVUiD04nNluXVkmF6Pg')
