@@ -4,6 +4,13 @@
   margin: 4vh auto;
 }
 
+.project.separator
+{
+  border: 0px var(--accent) solid;
+
+  margin: 4.5% 0 0 0;
+}
+
 .project.container
 {
   display: grid;
