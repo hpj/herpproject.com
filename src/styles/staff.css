@@ -3,6 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  max-width: 700px;
+  margin: auto;
 }
 
 .staff.title
@@ -25,16 +28,10 @@
   display: grid;
 
   grid-template-columns: auto 1fr;
-  grid-template-areas: "circle info" "links projects";
+  grid-template-areas: "circle info" "circle projects";
   grid-column-gap: 24px;
 
   margin: 2vh 2vw 2vh 2vw;
-}
-
-.staffMember.container > .links.container
-{
-  justify-content: center;
-  margin: 0;
 }
 
 .staffMember.circle
@@ -57,4 +54,17 @@
 .staffMember.projects > p
 {
   margin: 0;
+}
+
+.staffMember > * > .icon
+{
+  min-width: 12px;
+  max-width: 16px;
+  min-height: 12px;
+  max-height: 16px;
+
+  width: 3vw;
+  height: 3vw;
+
+  margin: 0 6px;
 }

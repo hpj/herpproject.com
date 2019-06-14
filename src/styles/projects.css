@@ -1,11 +1,7 @@
 .projects.container
 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  max-width: 700px;
-  margin: auto;
+  max-width: 600px;
+  margin: 4vh auto;
 }
 
 .project.container
@@ -13,10 +9,11 @@
   display: grid;
 
   grid-template-columns: auto 1fr;
-  grid-template-areas: "circle info" "links info";
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "circle card" "circle info";
   grid-column-gap: 24px;
 
-  width: 250px;
+  width: auto;
   height: auto;
 
   margin: 2vh 2vw 2vh 2vw;
@@ -27,12 +24,18 @@
   grid-area: circle;
 }
 
-.project.info
+.project.card
 {
-  grid-area: info;
+  grid-area: card;
   font-weight: 700;
 }
 
+.project.info
+{
+  grid-area: info;
+}
+
+.project.card > p,
 .project.info > p
 {
   margin: 0;
