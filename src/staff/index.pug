@@ -1,7 +1,7 @@
 extends ../layout.pug
 
 append head
-  title Herp Project | Timeline
+  title Herp Project | Staff
 
   link(rel='stylesheet' href='../styles/body.css')
   link(rel='stylesheet' href='../styles/icons.css')
@@ -10,9 +10,10 @@ append head
 append content
   .staff.container
     .staff.title Full-Time Staff
+
     .staffMember.container
       .staffMember.box
-        img(src='https://secure.gravatar.com/avatar/598c0ee957703632c65a68458031149f' alt='Kerolos Zaki')
+        img(src='https://lh3.googleusercontent.com/gySQOwBG3cDpwBh8MjlOqSNRiCpbJDFHPGKQbTzw99MwxBSVUaL8GM7UVFaHg1cBqauS30qEeHFaSUEydo1gv2Fkc1wnsM_xeFvN0dpsrSbmHnOGRy0ibPNJcurxpQAC20NNNkKVrV9nTF9-hLeyd3XEXkOc-t30Q43u43s6fvPUIW8zQXF89kjh5nmKZiLUNUEmF-_NjWmyAn7VTFoTd5Bu_3J4t6SQ8PRst99wHwaOEiLmYVmXZnRbZEH0SCMJ6Y-qwuru7rCuV8EreBCSyBqrjSLTApYgH500LJIREj_MJM7t7XCA4_xkOWtYEwwIO4NhApcSXQGVUKWxS5ia_sWVzVP2iyLXhB8P07wcshrMmtY49DFPOhKnmqavh5QIUR8UIJpm4-CX3x6VTMQWk7ZDmmFm_QE582JeOBO984_x5DPXEJgB9vOEA37apNrlbHlgt-e-ILEBD6NvXWZzk8SCGLD7-2M_o9aa3BAWWK_8iYAAwO4sE42YYPfuh43InnpmbQA8qkPjlO4lyBBPM6QFoZOB3uoO2Qj0biD7gfS-xB3OwCvYwMnKJO_GzLBK3eBFS67thHKgeqgZbzKYW9iuH9S5_hsOHJ-iO6NMiE1scDQSZv6764oOB0GfbgsyfmM0HUpvz1L-Iprl7od1tkqsxIwxWaI_UNQBQtP5D1hpiPYuAWKBibz3KY-hCg6vBsMrC_EB_Kc8jgL5CUS1KS35=s664-no' alt='Kerolos Zaki')
       .staffMember.info
         +iconLink('twitter', 'https://www.twitter.com/ker0olos')
         p Kerolos Zaki
@@ -25,3 +26,16 @@ append content
         p Sulaiman (Developer)
         p Fabric (Developer)
         p The Story So Far (Writer)
+
+    .staff.title Part-Time Staff
+
+    .staffMember.container
+      .staffMember.box
+        img(src='https://scontent.fcai2-1.fna.fbcdn.net/v/t1.0-9/60542007_836185533431945_8693755968862814208_n.jpg?_nc_cat=106&_nc_oc=AQkMq377pYYZei-1yyVJtrmKoooQ59LJxt-GHvkLnGsi1HFgx8eXxQWL5v7UsoKEMJs&_nc_ht=scontent.fcai2-1.fna&oh=8679c55c4a47cfbf46ddb2e8e9551c11&oe=5D8C6BE2' alt='Ebrahim Badawy')
+      .staffMember.info
+        +iconLink('facebook', 'https://www.facebook.com/Dr.Gaster')
+        p Ebrahim Badawy
+        p Designer.
+        p Since June 2019
+      .staffMember.projects
+        p The Story So Far (Artist)
