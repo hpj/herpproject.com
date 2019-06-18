@@ -47,3 +47,14 @@
 {
   margin: 0;
 }
+
+a
+{
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}

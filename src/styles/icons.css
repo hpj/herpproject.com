@@ -17,6 +17,11 @@
   fill: #7289DA;
 }
 
+.icon.link.facebook:hover
+{
+  fill: #4172B8;
+}
+
 .icon.link.gitlab:hover
 {
   fill: #E24329;
@@ -25,6 +30,11 @@
 .icon.link.patreon:hover
 {
   fill: #F96854; 
+}
+
+.icon.link.question-mark:hover
+{
+  fill: #2eb17a; 
 }
 
 .icon.link.teespring:hover
