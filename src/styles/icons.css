@@ -12,6 +12,11 @@
   cursor: pointer;
 }
 
+.icon.link.apple:hover
+{
+  fill: #999999; 
+}
+
 .icon.link.discord:hover
 {
   fill: #7289DA;
@@ -27,6 +32,11 @@
   fill: #E24329;
 }
 
+.icon.link.googleplay:hover
+{
+  fill: #607D8B;
+}
+
 .icon.link.patreon:hover
 {
   fill: #F96854; 
@@ -34,7 +44,12 @@
 
 .icon.link.question-mark:hover
 {
-  fill: #2eb17a; 
+  fill: #2EB17A; 
+}
+
+.icon.link.react:hover
+{
+  fill: #61DAFB; 
 }
 
 .icon.link.teespring:hover
