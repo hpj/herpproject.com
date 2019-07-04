@@ -11,7 +11,7 @@ pages:
   - "npm run compile"
 
   - "mkdir public"
-  - "cp -r compiled/* public"
+  - "cp -r build/* public"
   artifacts:
     paths:
     - public

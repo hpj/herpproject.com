@@ -2,5 +2,5 @@
 
 babel.config.js
 
-/compiled
+/build
 /public

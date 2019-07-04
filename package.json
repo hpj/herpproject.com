@@ -5,13 +5,13 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "copy": "npx copy-and-watch src/styles/*.css compiled/styles",
+    "copy": "npx copy-and-watch src/styles/*.css build/styles",
     "svgo": "svgo --config='{ \"plugins\": [ { \"removeAttrs\": { \"attrs\": \"(fill|stroke)\" } } ] }' ./assets",
-    "sprite": "create-svg-sprite --input ./assets --output ./compiled",
-    "pug": "npx pug src --out compiled --pretty",
-    "live": "npx budo --dir compiled --live",
-    "dev": "(trap 'kill 0' SIGINT; npm run sprite & npx copy-and-watch --watch src/styles/*.css compiled/styles & npx pug src --out compiled --pretty --watch & npx budo ./src/index.js:bundle.js --dir compiled --live -- -t babelify)",
-    "compile": "npm run svgo && npm run sprite && npm run copy && npm run pug && npx browserify ./src/index.js -t babelify -p tinyify -o compiled/bundle.js"
+    "sprite": "create-svg-sprite --input ./assets --output ./build",
+    "pug": "npx pug src --out build --pretty",
+    "live": "npx budo --dir build --live",
+    "start": "(trap 'kill 0' SIGINT; npm run sprite & npx copy-and-watch --watch src/styles/*.css build/styles & npx pug src --out build --pretty --watch & npx budo ./src/index.js:bundle.js --dir build --live -- -t babelify)",
+    "build": "npm run svgo && npm run sprite && npm run copy && npm run pug && npx browserify ./src/index.js -t babelify -p tinyify -o build/bundle.js"
   },
   "homepage": "https://gitlab.com/hpj/hpj.gitlab.io#readme",
   "repository": {
@@ -24,18 +24,18 @@
   "author": "Herp Project",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "babel-eslint": "^10.0.1",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.2",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "budo": "^11.6.2",
     "copy-and-watch": "^0.1.2",
     "create-svg-sprite": "^1.0.4",
-    "eslint": "^5.16.0",
-    "pug": "^2.0.3",
+    "eslint": "^6.0.1",
+    "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
-    "pug-lint": "^2.5.0",
+    "pug-lint": "^2.6.0",
     "pug-lint-config-clock": "^2.0.0",
     "tinyify": "^2.5.1"
   }
