@@ -8,7 +8,7 @@ pages:
   script:
   # install dependencies & compile the code
   - "npm install"
-  - "npm run compile"
+  - "npm run build"
 
   - "mkdir public"
   - "cp -r build/* public"
