@@ -50,7 +50,7 @@
 
 a
 {
-  color: var(--foreground);
+  color: var(--links);
   text-decoration: none;
 }
 
