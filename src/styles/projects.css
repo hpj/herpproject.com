@@ -48,13 +48,7 @@
   margin: 0;
 }
 
-a
+.project.card > a
 {
   color: var(--links);
-  text-decoration: none;
-}
-
-a:hover
-{
-  text-decoration: underline;
 }

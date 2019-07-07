@@ -12,13 +12,13 @@
   flex-basis: 100%;
 
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 
   color: var(--foreground);
   text-decoration: underline;
   
   font-weight: 700;
-  font-size: calc(11px + 0.6vw + 0.6vh);
+  font-size: calc(8px + 0.6vw + 0.6vh);
   
   margin: 2vh 0 2vh 2vw;
 }
