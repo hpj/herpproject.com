@@ -12,7 +12,7 @@
   flex-basis: 100%;
 
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
 
   color: var(--foreground);
   text-decoration: underline;
