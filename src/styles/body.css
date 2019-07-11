@@ -84,13 +84,14 @@ a:hover
   display: flex;
   flex-wrap: wrap;
 
+  width: 100%;
+
   margin: 2vh 0 2vh 3vw;
 }
 
 .button.container
 {
   display: flex;
-  flex-basis: 100%;
   align-items: center;
 
   color: var(--accent);

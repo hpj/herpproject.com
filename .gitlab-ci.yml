@@ -6,7 +6,7 @@ pages:
   stage: deploy
   image: node:latest
   script:
-  # install dependencies & compile the code
+  # install dependencies & build the code
   - "npm install"
   - "npm run build"
 
