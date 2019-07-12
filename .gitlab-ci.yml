@@ -11,6 +11,7 @@ pages:
   - "npm run build"
 
   - "mkdir public"
+  - "cp favicon.ico public"
   - "cp -r build/* public"
   artifacts:
     paths:
