@@ -49,8 +49,6 @@ a:hover
 
 .header.title
 {
-  word-spacing: 100vw;
-
   width: min-content;
 
   color: var(--accent);
