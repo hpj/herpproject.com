@@ -48,7 +48,8 @@
   margin: 0;
 }
 
-.project.card > a
+.project.card > a,
+.project.info > a
 {
   color: var(--links);
 }
