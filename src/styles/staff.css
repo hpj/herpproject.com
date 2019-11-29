@@ -3,6 +3,8 @@
   display: grid;
   justify-content: center;
 
+  color: var(--foreground);
+
   max-width: 700px;
   margin: auto;
 }

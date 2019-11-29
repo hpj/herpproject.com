@@ -3,10 +3,20 @@
 html
 {
   --accent: #434343;
-  --accent-hover: rgba(153, 153, 153, 0.46);
   --foreground: #000000;
   --background: white;
   --links: #4082ec;
+}
+
+@media (prefers-color-scheme: dark)
+{
+  html
+  {
+    --accent: #8e8e8e;
+    --foreground: #f0f0f0;
+    --background: #141313;
+    --links: #5380cb;
+  }
 }
 
 body
@@ -139,7 +149,7 @@ a:hover
   overflow: hidden;
   box-sizing: border-box;
 
-  border: #434343 5px solid;
+  border: var(--accent) 5px solid;
 }
 
 .circle

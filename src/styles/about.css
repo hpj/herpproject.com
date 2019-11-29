@@ -3,14 +3,14 @@
   display: flex;
   justify-content: center;
 
+  color: var(--foreground);
+
   max-width: 700px;
   margin: auto;
 }
 
 .about.text
-{
-  color: var(--foreground);
-  
+{  
   font-size: calc(6px + 0.5vw + 0.5vh);
   
   margin: 2vh 2vw 0 2vw;
