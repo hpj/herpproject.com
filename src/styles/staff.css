@@ -9,22 +9,6 @@
   margin: auto;
 }
 
-.staff.title
-{
-  flex-basis: 100%;
-
-  display: flex;
-  justify-content: center;
-
-  color: var(--foreground);
-  text-decoration: underline;
-  
-  font-weight: 700;
-  font-size: calc(6px + 0.5vw + 0.5vh);
-  
-  margin: 2vh 0 2vh 2vw;
-}
-
 .staffMember.container
 {
   display: grid;
@@ -33,7 +17,7 @@
   grid-template-areas: "circle info" "circle projects";
   grid-column-gap: 24px;
 
-  margin: 2vh 2vw 2vh 2vw;
+  margin: 2vh 0;
 }
 
 .staffMember.circle
