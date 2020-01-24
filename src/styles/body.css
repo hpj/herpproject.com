@@ -61,6 +61,8 @@ a:hover
 
 .content.container
 {
+  color: var(--foreground);
+  
   max-width: 600px;
   margin: 4vh auto;
 }
