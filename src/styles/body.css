@@ -69,7 +69,8 @@ a:hover
   
   max-width: 600px;
 
-  margin: 4vh 4vw;
+  padding: 0 5vw;
+  margin: 4vh auto;
 }
 
 .header.container
