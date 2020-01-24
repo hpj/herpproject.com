@@ -4,13 +4,6 @@
   margin: 4vh auto;
 }
 
-.project.separator
-{
-  border: 0px var(--accent) solid;
-
-  margin: 5vh 0 0 0;
-}
-
 .project.container
 {
   display: grid;
@@ -24,8 +17,10 @@
 
   cursor: pointer;
 
-  padding: 20px;
   border-radius: 10px;
+
+  padding: 20px;
+  margin: 15px;
 
   width: auto;
   height: auto;

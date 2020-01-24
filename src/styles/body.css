@@ -68,7 +68,8 @@ a:hover
   color: var(--foreground);
   
   max-width: 600px;
-  margin: 4vh auto;
+
+  margin: 4vh 4vw;
 }
 
 .header.container
