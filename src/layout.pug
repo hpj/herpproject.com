@@ -2,12 +2,12 @@ doctype html
 
 mixin icon(name)
   svg.icon(class=name)
-    use(xlink:href=`../icons.svg#${name}`)
+    use(xlink:href=`/icons.svg#${name}`)
 
 mixin iconLink(name, link)
   a(href=link)
     svg.icon.link(class=name)
-      use(xlink:href=`../icons.svg#${name}`)
+      use(xlink:href=`/icons.svg#${name}`)
 
 html(lang='en')
   head
@@ -15,15 +15,15 @@ html(lang='en')
       meta(charset='UTF-8')
       meta(name='viewport' content='width=device-width, initial-scale=1.0')
       meta(http-equiv='X-UA-Compatible' content='ie=edge')
-      //- link(rel='shortcut icon' href='../favicon.ico')
+      //- link(rel='shortcut icon' href='/favicon.ico')
 
   body
     block content
       .header.container
         .header.title HP.J
-        a.header.item(href='../') Projects
-        a.header.item(href='../about') About
-        a.header.item(href='../staff') Staff
+        a.header.item(href='/') Projects
+        a.header.item(href='/about') About
+        a.header.item(href='/staff') Staff
       .links.container
         +iconLink('discord', 'https://discord.gg/8SQsRxD')
         +iconLink('twitter', 'https://www.twitter.com/herpproject')
