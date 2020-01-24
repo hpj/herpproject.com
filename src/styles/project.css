@@ -1,0 +1,100 @@
+.projects.container
+{
+  color: var(--foreground);
+
+  max-width: 600px;
+  margin: 4vh auto;
+}
+
+.project.container
+{
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "circle card" "circle info";
+  grid-column-gap: 24px;
+  
+  width: auto;
+  height: auto;
+
+  padding: 20px;
+}
+
+.project.circle
+{
+  grid-area: circle;
+}
+
+.project.card
+{
+  grid-area: card;
+  font-weight: 700;
+}
+
+.project.info
+{
+  grid-area: info;
+}
+
+.project.links
+{
+  display: flex;
+  flex-wrap: wrap;
+
+  font-weight: 700;
+
+  margin: 40px 0 0 0;
+}
+
+.project.link
+{
+  display: flex;
+
+  align-items: center;
+
+  user-select: none;
+  text-transform: uppercase;
+
+  width: min-content;
+
+  border-radius: 5px;
+
+  padding: 5px 10px;
+  margin: 0 15px 0 0;
+
+  background-color: var(--links-inactive);
+}
+
+.project.link:hover
+{
+  text-decoration: none;
+
+  color: var(--links-fore);
+  background-color: var(--links-ground);
+}
+
+.project.link:hover > .icon
+{
+  fill: var(--links-fore);
+}
+
+.project.link > .icon
+{
+  width: 18px;
+  height: 18px;
+
+  margin: 3px 0;
+}
+
+.project.link > .icon ~ p
+{
+  padding: 0 0 0 10px;
+}
+
+.project.card > p,
+.project.info > p,
+.project.link > p
+{
+  margin: 0;
+}

@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+append head
+  title Kuruit Bedan Fash5 | Herp Project
+
+  meta(name='title' content='Kuruit Bedan Fash5 | Herp Project')
+  meta(name='description' content='A fill-in-the-blank party game where all the cards are made by the community.')
+
+  meta(property='og:type' content='website')
+  meta(property='og:url' content='https://herpproject.com/kuruit')
+  meta(property='og:title' content='Kuruit Bedan Fash5 by Herp Project')
+  meta(property='og:description' content='A fill-in-the-blank party game where all the cards are made by the community.')
+  meta(property='og:image' content='https://herpproject.com/card-kuruit.png')
+
+  link(rel='stylesheet' href='../styles/body.css')
+  link(rel='stylesheet' href='../styles/icons.css')
+  link(rel='stylesheet' href='../styles/project.css')
+
+append content
+  .projects.container
+    .project.container
+      .project.circle
+        +icon('kbf-icon')
+      .project.card
+        p Kuruit Bedan Fash5
+      .project.info
+        p A fill-in-the-blank party game where all the cards are made by the community.
+
+        .project.links
+          a.project.link(href='https://bedan.me')
+            +icon('web')
+            p bedan.me
+
+          a.project.link(href='https://www.facebook.com/BedanFash5')
+            +icon('facebook')
+

@@ -6,7 +6,10 @@ html
   --hover: #cccaca;
   --foreground: #000000;
   --background: white;
-  --links: #4082ec;
+
+  --links-inactive: rgba(111, 111, 111, 0.15);
+  --links-ground: rgba(33, 133, 239, 0.25);
+  --links-fore: rgba(33, 133, 239, 0.65);
 }
 
 @media (prefers-color-scheme: dark)
@@ -17,7 +20,10 @@ html
     --hover: #232020;
     --foreground: #f0f0f0;
     --background: #141313;
-    --links: #5380cb;
+
+    --links-inactive: rgba(162, 162, 162, 0.05);
+    --links-ground: rgba(33, 133, 239, 0.25);
+    --links-fore: rgba(33, 133, 239, 0.65);
   }
 }
 
