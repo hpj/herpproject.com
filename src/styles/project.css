@@ -50,6 +50,8 @@
 {
   display: flex;
   flex-wrap: wrap;
+  
+  color: var(--foreground);
 
   margin: 40px 0 0 0;
 }
@@ -91,7 +93,7 @@
 
 .project.link > .icon
 {
-  width: 18px;
+  min-width: 18px;
   height: 18px;
 
   margin: 3px 0;

@@ -59,6 +59,12 @@ a:hover
   text-decoration: underline;
 }
 
+.content.container
+{
+  max-width: 600px;
+  margin: 4vh auto;
+}
+
 .header.container
 {
   display: flex;
