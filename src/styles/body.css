@@ -46,16 +46,20 @@ body
 
 a
 {
+  color: var(--foreground);
+
   text-decoration: none;
 }
 
 a:visited
 {
-  color: unset;
+  color: var(--foreground);
 }
 
 a:hover
 {
+  color: var(--foreground);
+  
   text-decoration: underline;
 }
 
