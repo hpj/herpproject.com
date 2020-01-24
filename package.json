@@ -6,13 +6,10 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf ./build && mkdir ./build",
-    "copy": "npx copy-and-watch src/styles/*.css build/styles",
     "svgo": "svgo --config='{ \"plugins\": [ { \"removeAttrs\": { \"attrs\": \"(fill|stroke)\" } } ] }' ./assets",
     "sprite": "svgstore ./assets/* -o ./build/icons.svg",
-    "pug": "npx pug src --out build",
-    "live": "npx budo --dir build --live",
     "start": "(trap 'kill 0' SIGINT; npm run sprite & npx copy-and-watch --watch src/styles/*.css build/styles & npx pug src --out build --pretty --watch & npx budo ./src/index.js:bundle.js --dir build --live -- -t babelify)",
-    "build": "npm run clean && npm run svgo && npm run sprite && npm run copy && cp public/* build -r && npm run pug && npx browserify ./src/index.js -t babelify -p tinyify -o build/bundle.js"
+    "build": "npm run clean && npm run svgo && npm run sprite && npx copy-and-watch src/styles/*.css build/styles && cp public/* build -r && npx pug src --out build && npx browserify ./src/index.js -t babelify -p tinyify -o build/bundle.js"
   },
   "homepage": "https://gitlab.com/hpj/hpj.gitlab.io#readme",
   "repository": {

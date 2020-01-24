@@ -119,15 +119,15 @@ a:hover
 
 .links.container > *
 {
-  min-width: 12px;
-  max-width: 16px;
-  min-height: 12px;
-  max-height: 16px;
+  min-width: 16px;
+  max-width: 20px;
+  min-height: 16px;
+  max-height: 20px;
 
   width: 3vw;
   height: 3vw;
 
-  margin: 0 8px 0 0;
+  margin: 0 10px 0 0;
 }
 
 .circle,
