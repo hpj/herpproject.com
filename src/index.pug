@@ -29,31 +29,17 @@ append content
 
     hr.project.separator
 
-    .project.container
+    a.project.container(href='./abram')
       .project.circle
         +icon('abram-icon')
       .project.card
         p Abram
       .project.info
         p Currently under development
-        //- br
-        //- p Abram is an app that allows you to forge new friendships, it was designed with the principles of psychology and a focus on mental health, it suggests new friends for you based on a lot of different things, and then encourages you to talk to them. the HPJ team wants you to know that they have a lot of ambitions, passion, hope, and love for Abram.
-
+    
     hr.project.separator
 
-    .project.container
-      .project.circle
-        +icon('question-mark')
-      .project.card
-        p Fabric
-      .project.info
-        p Due to the shift in the company's core focus, this project is not prioritized and is not in active development.
-        br
-        p Fabric is a high-performance vector graphics drawing library, built to push the limits of today's 2-d video games and 2-d animations by rendering them in real-time vector graphics.
-
-    hr.project.separator
-
-    a.project.container(href='https://gitlab.com/hpj/Dawayer')
+    a.project.container(href='./dawayer')
       .project.circle
         +icon('dawayer-icon')
       .project.card
@@ -65,7 +51,7 @@ append content
 
     hr.project.separator
 
-    a.project.container(href='https://gitlab.com/hpj/Sulaiman')
+    a.project.container(href='./sulaiman')
       .project.circle
         +icon('sulaiman-icon')
       .project.card
@@ -76,8 +62,20 @@ append content
         p Sulaiman is an expendable keyboard launcher built with powerful API for extensions, each extension runs on its separate sandbox, Sulaiman also comes with a set of useful built-in extension and a set of basic features and options to help you use it comfortably.
 
     hr.project.separator
-    
-    .project.container
+
+    .project.container.inactive
+      .project.circle
+        +icon('question-mark')
+      .project.card
+        p Fabric
+      .project.info
+        p Due to the shift in the company's core focus, this project is not prioritized and is not in active development.
+        br
+        p Fabric is a high-performance vector graphics drawing library, built to push the limits of today's 2-d video games and 2-d animations by rendering them in real-time vector graphics.
+
+    hr.project.separator
+
+    .project.container.inactive
       .project.circle
         +icon('question-mark')
       .project.card
@@ -87,7 +85,7 @@ append content
 
     hr.project.separator
 
-    .project.container
+    .project.container.inactive
       .project.circle
         +icon('question-mark')
       .project.card

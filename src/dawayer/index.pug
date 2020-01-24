@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+append head
+  title Dawayer | Herp Project
+
+  meta(name='title' content='Dawayer | Herp Project')
+  meta(name='description' content='An audio player built with web technologies.')
+
+  meta(property='og:type' content='website')
+  meta(property='og:url' content='https://herpproject.com/dawayer')
+  meta(property='og:title' content='Dawayer by Herp Project')
+  meta(property='og:description' content='An audio player built with web technologies.')
+  meta(property='og:image' content='https://herpproject.com/card.png')
+
+  link(rel='stylesheet' href='../styles/body.css')
+  link(rel='stylesheet' href='../styles/icons.css')
+  link(rel='stylesheet' href='../styles/project.css')
+
+append content
+  .projects.container
+    .project.container
+      .project.circle
+        +icon('dawayer-icon')
+      .project.card
+        p Dawayer
+      .project.info
+        p First released on March, 2019
+        p Discontinued on July, 2019
+        br
+        p Dawayer is an audio player built with web technologies it lets you play local files, download and stream podcasts, stream music from a streaming service, Dawayer also has a feed page that gives you personalized playlists, statistics about your listening habits and notifies you when your favorite artist published a new track or a new podcast episode.
+
+        .project.links
+          a.project.link(href='https://gitlab.com/hpj/Dawayer')
+            +icon('gitlab')
+            p GitLab
+

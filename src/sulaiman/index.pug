@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+append head
+  title Sulaiman | Herp Project
+
+  meta(name='title' content='Sulaiman | Herp Project')
+  meta(name='description' content='A modern keyboard launcher built with web technologies.')
+
+  meta(property='og:type' content='website')
+  meta(property='og:url' content='https://herpproject.com/sulaiman')
+  meta(property='og:title' content='Sulaiman by Herp Project')
+  meta(property='og:description' content='A modern keyboard launcher built with web technologies.')
+  meta(property='og:image' content='https://herpproject.com/card.png')
+
+  link(rel='stylesheet' href='../styles/body.css')
+  link(rel='stylesheet' href='../styles/icons.css')
+  link(rel='stylesheet' href='../styles/project.css')
+
+append content
+  .projects.container
+    .project.container
+      .project.circle
+        +icon('sulaiman-icon')
+      .project.card
+        p Sulaiman
+      .project.info
+        p First released on May, 2019
+        p Discontinued on July, 2019
+        br
+        p Sulaiman is an expendable keyboard launcher built with powerful API for extensions, each extension runs on its separate sandbox, Sulaiman also comes with a set of useful built-in extension and a set of basic features and options to help you use it comfortably.
+
+        .project.links
+          a.project.link(href='https://gitlab.com/hpj/Sulaiman')
+            +icon('gitlab')
+            p GitLab
+

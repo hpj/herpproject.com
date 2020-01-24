@@ -1,7 +1,5 @@
 .projects.container
 {
-  color: var(--foreground);
-
   max-width: 600px;
   margin: 4vh auto;
 }
@@ -22,6 +20,8 @@
   grid-template-areas: "circle card" "circle info";
   grid-column-gap: 24px;
 
+  color: var(--foreground);
+
   cursor: pointer;
 
   padding: 20px;
@@ -31,9 +31,16 @@
   height: auto;
 }
 
+.project.container.inactive
+{
+  pointer-events: none;
+}
+
 .project.container:hover
 {
+  color: var(--foreground);
   background-color: var(--hover);
+
   text-decoration: none;
 }
 
