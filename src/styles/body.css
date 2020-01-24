@@ -3,6 +3,7 @@
 html
 {
   --accent: #434343;
+  --hover: #cccaca;
   --foreground: #000000;
   --background: white;
   --links: #4082ec;
@@ -13,6 +14,7 @@ html
   html
   {
     --accent: #8e8e8e;
+    --hover: #232020;
     --foreground: #f0f0f0;
     --background: #141313;
     --links: #5380cb;

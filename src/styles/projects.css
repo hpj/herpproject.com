@@ -22,8 +22,19 @@
   grid-template-areas: "circle card" "circle info";
   grid-column-gap: 24px;
 
+  cursor: pointer;
+
+  padding: 20px;
+  border-radius: 10px;
+
   width: auto;
   height: auto;
+}
+
+.project.container:hover
+{
+  background-color: var(--hover);
+  text-decoration: none;
 }
 
 .project.circle
@@ -46,10 +57,4 @@
 .project.info > p
 {
   margin: 0;
-}
-
-.project.card > a,
-.project.info > a
-{
-  color: var(--links);
 }
