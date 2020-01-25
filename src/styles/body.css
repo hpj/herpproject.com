@@ -73,6 +73,11 @@ a:hover
   margin: 4vh auto;
 }
 
+.content.container a
+{
+  text-decoration: underline;
+}
+
 .header.container
 {
   display: flex;
