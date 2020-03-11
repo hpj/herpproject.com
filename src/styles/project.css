@@ -47,6 +47,11 @@
   grid-area: info;
 }
 
+.project.info > hr
+{
+  border: 1px solid var(--links-inactive);
+}
+
 .project.links
 {
   display: flex;
