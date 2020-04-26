@@ -17,6 +17,22 @@ append head
   link(rel='stylesheet' href='../styles/project.css')
 
 append content
+  script.
+    function openScreenshot(url)
+    {
+      document.querySelector('.screenshot.wrapper').classList.add('active');
+      document.querySelector('.screenshot.container').children[0].src = url;
+    }
+
+    function closeScreenshot()
+    {
+      document.querySelector('.screenshot.wrapper').classList.remove('active');
+    }
+    
+  .screenshot.wrapper
+    .screenshot.container(onclick='closeScreenshot()')
+      img
+  
   .projects.container
     .project.container
       .project.circle
@@ -35,3 +51,14 @@ append content
             +icon('gitlab')
             p GitLab
 
+        hr
+
+        .project.screenshots
+          .project.screenshot(onclick="openScreenshot('/assets/screenshots/dawayer-1.png')")
+            img(src='/assets/screenshots/dawayer-1.png')
+
+          .project.screenshot(onclick="openScreenshot('/assets/screenshots/dawayer-2.png')")
+            img(src='/assets/screenshots/dawayer-2.png')
+
+          .project.screenshot(onclick="openScreenshot('/assets/screenshots/dawayer-3.png')")
+            img(src='/assets/screenshots/dawayer-3.png')
