@@ -18,19 +18,38 @@ append head
 
 append content
   script.
+    document.addEventListener('keyup', onkeyup)
+    
+    function onkeyup(e)
+    {
+      if (e.code === 'Escape')
+        closeScreenshot();
+    }
+
     function openScreenshot(url)
     {
-      document.querySelector('.screenshot.wrapper').classList.add('active');
-      document.querySelector('.screenshot.container').children[0].src = url;
+      const wrapper = document.querySelector('.screenshot.wrapper');
+      const container = document.querySelector('.screenshot.container');
+
+      container.children[0].src = url;
+
+      if (!wrapper.classList.contains('active'))
+        wrapper.classList.add('active');
     }
 
     function closeScreenshot()
     {
-      document.querySelector('.screenshot.wrapper').classList.remove('active');
+      const wrapper = document.querySelector('.screenshot.wrapper');
+      const container = document.querySelector('.screenshot.container');
+
+      if (wrapper.classList.contains('active'))
+        wrapper.classList.remove('active');
+      
+      container.children[0].src = '';
     }
-    
-  .screenshot.wrapper
-    .screenshot.container(onclick='closeScreenshot()')
+
+  .screenshot.wrapper(onclick='closeScreenshot()')
+    .screenshot.container
       img
   
   .projects.container
