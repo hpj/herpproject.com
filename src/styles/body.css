@@ -7,6 +7,8 @@ html
   --foreground: #000000;
   --background: white;
 
+  --notice: #a39000;
+
   --links-inactive: rgba(111, 111, 111, 0.15);
   --links-ground: rgba(33, 133, 239, 0.25);
   --links-fore: rgba(33, 133, 239, 0.65);
@@ -20,6 +22,8 @@ html
     --hover: #232020;
     --foreground: #f0f0f0;
     --background: #141313;
+
+    --notice: #d1bc1c;
 
     --links-inactive: rgba(162, 162, 162, 0.05);
     --links-ground: rgba(33, 133, 239, 0.25);
@@ -39,7 +43,7 @@ body
   overflow-x: hidden;
   overflow-y: overlay;
 
-  font-size: calc(5px + 0.5vw + 0.5vh);
+  font-size: calc(6px + 0.4vw + 0.4vh);
 
   margin: 0;
 }
