@@ -9,8 +9,8 @@
   display: grid;
 
   grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto 1fr;
-  grid-template-areas: "circle notice" "circle card" "circle info";
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "circle card" "circle info";
   grid-column-gap: 24px;
 
   color: var(--foreground);
@@ -46,14 +46,8 @@
 
 .project.notice
 {
-  grid-area: notice;
-  
   color: var(--notice);
-
-  font-size: calc(4px + 0.4vw + 0.4vh);
   font-weight: 700;
-
-  margin: 0px 0 10px 0;
 }
 
 .project.card
@@ -67,7 +61,6 @@
   grid-area: info;
 }
 
-.project.notice > p,
 .project.card > p,
 .project.info > p
 {
