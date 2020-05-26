@@ -7,7 +7,7 @@
 
   max-width: 600px;
 
-  padding: 0 5vw;
+  padding: 0 10vw;
   margin: 4vh auto;
 }
 
@@ -16,11 +16,6 @@
   width: 100%;
   
   font-size: calc(6px + 0.5vw + 0.5vh);
-}
-
-.about.text.ar
-{
-  direction: rtl;
 }
 
 .about.text > p

@@ -61,11 +61,11 @@
   grid-template-areas: "circle card" "circle notice" "circle info";
   grid-column-gap: 24px;
   
+  padding: 25px;
+  margin: 25px 0;
+
   width: auto;
   height: auto;
-
-  padding: 20px;
-  margin: 15px;
 }
 
 .project.circle
@@ -182,12 +182,12 @@
 
   width: min-content;
 
-  font-size: calc(5px + 0.4vw + 0.4vh);
+  font-size: calc(calc(5px + 0.4vw + 0.4vh));
   font-weight: 700;
 
   border-radius: 5px;
 
-  padding: 8px 10px;
+  padding: 10px 15px;
   margin: 0 15px 15px 0;
 
   background-color: var(--links-inactive);

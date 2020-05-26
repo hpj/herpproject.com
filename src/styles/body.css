@@ -5,9 +5,9 @@ html
   --accent: #434343;
   --hover: #cccaca;
   --foreground: #000000;
-  --background: white;
+  --background: rgb(255, 255, 255);
 
-  --notice: #a39000;
+  --notice: #8d7d00;
 
   --links-inactive: rgba(111, 111, 111, 0.15);
   --links-ground: rgba(33, 133, 239, 0.25);
@@ -145,15 +145,15 @@ a:hover
 {
   display: flex;
 
-  margin: 2vh 0 2vh 3vw;
+  margin: 3vh 0 3vh calc(3vw + 2.5px);
 }
 
 .links.container > *
 {
-  min-width: 16px;
-  max-width: 20px;
-  min-height: 16px;
-  max-height: 20px;
+  min-width: 20px;
+  max-width: 26px;
+  min-height: 20px;
+  max-height: 26px;
 
   width: 3vw;
   height: 3vw;
@@ -180,7 +180,7 @@ a:hover
   overflow: hidden;
   box-sizing: border-box;
 
-  border: var(--accent) 5px solid;
+  border: var(--accent) 2px solid;
 }
 
 .circle
@@ -193,8 +193,8 @@ a:hover
 .circle > .icon,
 .box > .icon
 {
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
 }
 
 .circle > img,
