@@ -8,16 +8,8 @@
     "clean": "rm -rf ./build && mkdir ./build",
     "svgo": "svgo --config='{ \"plugins\": [ { \"removeAttrs\": { \"attrs\": \"(fill|stroke)\" } }, { \"removeViewBox\": false } ] }' ./assets",
     "sprite": "echo $(svgstore ./assets/*.svg) > build/icons.svg",
-    "start": "npm run sprite & npx copy-and-watch --watch src/styles/*.css build/styles & npx pug src --out build --pretty --watch & npx http-server build",
-    "build": "npm run clean && npm run svgo && npm run sprite && npx copy-and-watch src/styles/*.css build/styles && cp public/* build -r && npx pug src --out build"
-  },
-  "homepage": "https://gitlab.com/hpj/hpj.gitlab.io#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/hpj/hpj.gitlab.io.git"
-  },
-  "bugs": {
-    "url": "https://gitlab.com/hpj/hpj.gitlab.io/issues"
+    "start": "npm run sprite & npx copy-and-watch --watch src/styles/*.css build/styles & cp -r public/* build & npx pug src --out build --pretty --watch & npx http-server build",
+    "build": "npm run clean && npm run svgo && npm run sprite && cp -r src/styles build && cp -r public/* build && npx pug src --out build"
   },
   "author": "Herp Project",
   "license": "MIT",
