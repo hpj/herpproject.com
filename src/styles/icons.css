@@ -22,9 +22,9 @@
   fill: #4172B8;
 }
 
-.icon.link.gitlab:hover
+.icon.link.github:hover
 {
-  fill: #E24329;
+  fill: #2088FF;
 }
 
 .icon.link.question-mark:hover
