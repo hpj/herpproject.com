@@ -1,4 +1,4 @@
-.about.container
+.jobs.container
 {
   display: flex;
   justify-content: center;
@@ -11,14 +11,4 @@
 
   padding: 0 10vw;
   margin: 4vh auto;
-}
-
-.about.container
-{  
-  width: 100%;
-}
-
-.about.text > p
-{
-  margin: 8px 0;
 }
