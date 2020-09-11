@@ -19,7 +19,7 @@ append head
 append content
   script.
     document.addEventListener('keyup', onkeyup)
-    
+
     function onkeyup(e)
     {
       if (e.code === 'Escape')
@@ -34,7 +34,7 @@ append content
       container.children[0].src = url;
 
       if (!wrapper.classList.contains('active'))
-        wrapper.classList.add('active');
+        requestAnimationFrame(() => wrapper.classList.add('active'));
     }
 
     function closeScreenshot()
@@ -44,14 +44,14 @@ append content
 
       if (wrapper.classList.contains('active'))
         wrapper.classList.remove('active');
-      
-      container.children[0].src = '';
+
+      requestAnimationFrame(() => container.children[0].src = '');
     }
 
   .screenshot.wrapper(onclick='closeScreenshot()')
     .screenshot.container
-      img
-  
+      img(alt='Screenshot')
+
   .projects.container
     .project.container
       .project.circle
@@ -73,11 +73,18 @@ append content
         hr
 
         .project.screenshots
-          .project.screenshot(onclick="openScreenshot('/assets/screenshots/dawayer-1.png')")
-            img(src='/assets/screenshots/dawayer-1.png')
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/dawayer-1.png\')')
+            img(src='/assets/screenshots/dawayer-1.png' alt='Dawayer Tracks Menu')
 
-          .project.screenshot(onclick="openScreenshot('/assets/screenshots/dawayer-2.png')")
-            img(src='/assets/screenshots/dawayer-2.png')
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/dawayer-2.png\')')
+            img(src='/assets/screenshots/dawayer-2.png' alt='Dawayer Artists Menu')
 
-          .project.screenshot(onclick="openScreenshot('/assets/screenshots/dawayer-3.png')")
-            img(src='/assets/screenshots/dawayer-3.png')
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/dawayer-3.png\')')
+            img(src='/assets/screenshots/dawayer-3.png' alt='Dawayer Now Playing')
+
+        hr
+        br
+        p
+          | The app is named after
+          a(href='http://www.google.com/search?q=%22Dina+El+Wedidi+-+Dawayer%22')  Dina El Wedidi's Dawayer
+          | .

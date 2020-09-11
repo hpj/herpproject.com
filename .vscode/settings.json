@@ -1,5 +1,3 @@
 {
-  "cSpell.words": [
-    "youtube"
-  ]
+  "puglint.enable": true
 }

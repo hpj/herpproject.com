@@ -12,5 +12,6 @@
   "disallowClassAttributeWithStaticValue": true,
   "disallowClassLiteralsBeforeIdLiterals": true,
   "disallowDuplicateAttributes": true,
-  "disallowHtmlText": true
+  "disallowHtmlText": true,
+  "disallowIdLiterals": null
 }
