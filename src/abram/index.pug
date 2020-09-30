@@ -16,6 +16,41 @@ append head
   link(rel='stylesheet' href='../styles/project.css')
 
 append content
+  script.
+    document.addEventListener('keyup', onkeyup)
+
+    function onkeyup(e)
+    {
+      if (e.code === 'Escape')
+        closeScreenshot();
+    }
+
+    function openScreenshot(url)
+    {
+      const wrapper = document.querySelector('.screenshot.wrapper');
+      const container = document.querySelector('.screenshot.container');
+
+      container.children[0].src = url;
+
+      if (!wrapper.classList.contains('active'))
+        requestAnimationFrame(() => wrapper.classList.add('active'));
+    }
+
+    function closeScreenshot()
+    {
+      const wrapper = document.querySelector('.screenshot.wrapper');
+      const container = document.querySelector('.screenshot.container');
+
+      if (wrapper.classList.contains('active'))
+        wrapper.classList.remove('active');
+
+      requestAnimationFrame(() => container.children[0].src = '');
+    }
+
+  .screenshot.wrapper(onclick='closeScreenshot()')
+    .screenshot.container
+      img(alt='Screenshot')
+
   .projects.container
     .project.container
       .project.circle
@@ -37,6 +72,15 @@ append content
 
           a.project.link(href='/abram/principles')
             p Ethics & Principles
+
+        hr
+
+        .project.screenshots
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/abram-1.jpg\')')
+            img(src='/assets/screenshots/abram-1.jpg' alt='Abram Inbox')
+
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/abram-2.jpg\')')
+            img(src='/assets/screenshots/abram-2.jpg' alt='Abram Chat')
 
         hr
         br
