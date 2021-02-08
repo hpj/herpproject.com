@@ -4,11 +4,11 @@ append head
   title Airtegal by Herp Project
 
   meta(name='title' content='Airtegal by Herp Project')
-  meta(name='description' content='A comedy platform.')
+  meta(name='description' content='An app about comedy.. I think?..')
 
   meta(property='og:type' content='website')
   meta(property='og:title' content='Airtegal by Herp Project')
-  meta(property='og:description' content='This is funny, right?')
+  meta(property='og:description' content='This is funny, right?..')
   meta(property='og:image' content='https://herpproject.com/assets/card-airtegal.png')
 
   link(rel='stylesheet' href='../styles/body.css')
@@ -59,11 +59,11 @@ append content
         p Airtegal
         .project.tags #React #Progressive Web App #cssinjs #Express #WebSockets #GraphQL #Jest #Might
       .project.notice
+        p The app is in a Public Beta (Available only in Egypt).
+        br
         p The app's development is frozen indefinitely however it will be monitored, maintained, and bugs will be fixed regularly.
         br
         p All the servers have limited resources due to financial issues.
-        br
-        p The app is in a Limited Beta (Egypt).
       .project.info
         p In development since July, 2019.
         p First released on January 6, 2020.
@@ -93,14 +93,17 @@ append content
           a.project.link(href='/airtegal/terms')
             p Terms And Conditions
 
-        //- hr
+        hr
 
-        //- .project.screenshots
-        //-   .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-1.png\')')
-        //-     img(src='/assets/screenshots/airtegal-1.png' alt='Airtegal Landscape')
+        .project.screenshots
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-1.png\')')
+            img(src='/assets/screenshots/airtegal-1.png' alt='Airtegal Picking Phase')
 
-        //-   .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-2.png\')')
-        //-     img(src='/assets/screenshots/airtegal-2.png' alt='Airtegal Portrait')
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-2.png\')')
+            img(src='/assets/screenshots/airtegal-2.png' alt='Airtegal Round Winner - Landscape')
+
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-3.png\')')
+            img(src='/assets/screenshots/airtegal-3.png' alt='Airtegal Round Winner - Portrait')
 
         hr
         br
