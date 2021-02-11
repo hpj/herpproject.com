@@ -17,6 +17,8 @@ append head
 
 append content
   script.
+    var mode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+
     document.addEventListener('keyup', onkeyup)
 
     function onkeyup(e)
@@ -30,7 +32,7 @@ append content
       const wrapper = document.querySelector('.screenshot.wrapper');
       const container = document.querySelector('.screenshot.container');
 
-      container.children[0].src = url;
+      container.children[0].src = url.replace('$mode', mode);
 
       if (!wrapper.classList.contains('active'))
         requestAnimationFrame(() => wrapper.classList.add('active'));
@@ -44,7 +46,7 @@ append content
       if (wrapper.classList.contains('active'))
         wrapper.classList.remove('active');
 
-      requestAnimationFrame(() => container.children[0].src = '');
+      setTimeout(() => container.children[0].src = '', 250);
     }
 
   .screenshot.wrapper(onclick='closeScreenshot()')
@@ -80,7 +82,7 @@ append content
             p airtegal.me
 
           a.project.link(href='https://play.google.com/store/apps/details?id=me.hpj.airtegal')
-            img(style='width: auto; height: 28px;' alt='Get it on Google Play' src='/assets/playbadge.png')
+            img(style='width: auto; height: 28px;' alt='Get it on Google Play' src='/assets/play-badge.png')
 
           a.project.link(href='https://www.facebook.com/PlayAirtegal')
             +icon('facebook')
@@ -94,14 +96,20 @@ append content
         hr
 
         .project.screenshots
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-1.png\')')
-            img(src='/assets/screenshots/airtegal-1.png' alt='Airtegal Picking Phase')
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-$mode-1.png\')')
+            picture()
+              source(srcset='/assets/screenshots/airtegal-dark-1.png' media='(prefers-color-scheme: dark)')
+              img(src='/assets/screenshots/airtegal-light-1.png' alt='Airtegal Picking Phase')
 
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-2.png\')')
-            img(src='/assets/screenshots/airtegal-2.png' alt='Airtegal Round Winner - Landscape')
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-$mode-2.png\')')
+            picture
+              source(srcset='/assets/screenshots/airtegal-dark-2.png' media='(prefers-color-scheme: dark)')
+              img(src='/assets/screenshots/airtegal-light-2.png' alt='Airtegal Round Winner - Landscape')
 
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-3.png\')')
-            img(src='/assets/screenshots/airtegal-3.png' alt='Airtegal Round Winner - Portrait')
+          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-$mode-3.png\')')
+            picture
+              source(srcset='/assets/screenshots/airtegal-dark-3.png' media='(prefers-color-scheme: dark)')
+              img(src='/assets/screenshots/airtegal-light-3.png' alt='Airtegal Round Winner - Portrait')
 
         hr
         br

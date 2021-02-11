@@ -133,7 +133,8 @@
   margin: 0 15px 15px 0;
 }
 
-.project.screenshot > img
+.project.screenshot > img,
+.project.screenshot > picture > *
 {
   width: auto;
   height: 120px;

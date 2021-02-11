@@ -44,7 +44,7 @@ append content
       if (wrapper.classList.contains('active'))
         wrapper.classList.remove('active');
 
-      requestAnimationFrame(() => container.children[0].src = '');
+      setTimeout(() => container.children[0].src = '', 250);
     }
 
   .screenshot.wrapper(onclick='closeScreenshot()')
