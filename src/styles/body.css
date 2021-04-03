@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,900');
 
-html
+:root
 {
   --accent: #434343;
   --hover: #cccaca;
@@ -16,7 +16,7 @@ html
 
 @media (prefers-color-scheme: dark)
 {
-  html
+  :root
   {
     --accent: #8e8e8e;
     --hover: #232020;
