@@ -9,10 +9,13 @@
 .screenshot.wrapper
 {
   z-index: 1;
-  position: fixed;
-
+  
   display: flex;
-  align-items: center;
+  position: fixed;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
 
   background-color: rgba(0, 0, 0, 0.9);
 
@@ -22,34 +25,38 @@
   width: 100vw;
   height: 100vh;
 
-  pointer-events: none;
-  opacity: 0;
-
   transition: opacity 0.25s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .screenshot.wrapper.active
 {
-  pointer-events: all;
   opacity: 1;
+  pointer-events: all;
 }
 
 .screenshot.container
 {
-  width: fit-content;
-  height: fit-content;
+  display: flex;
+  overflow: auto;
+  
+  align-items: center;
+  flex-direction: column-reverse;
 
-  margin: 0 auto;
+  width: 100vw;
 }
 
-.screenshot.container > img
+.screenshot.container > div > img,
+.screenshot.container > div > picture > img
 {
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 65vh;
+  
   width: auto;
   height: auto;
 
-  border-radius: 10px;
+  margin: 5vh 0;
+
+  border-radius: 5px;
 }
 
 .project.container

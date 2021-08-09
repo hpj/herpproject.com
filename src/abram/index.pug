@@ -15,41 +15,46 @@ append head
   link(rel='stylesheet' href='../styles/icons.css')
   link(rel='stylesheet' href='../styles/project.css')
 
+mixin screenshots(name)
+  div(class=name id='inbox' onclick='openScreenshot(this)')
+    img(src='/assets/screenshots/abram-1.jpg' alt='Abram Inbox')
+
+  div(class=name id='chat' onclick='openScreenshot(this)')
+    img(src='/assets/screenshots/abram-2.jpg' alt='Abram Chat')
+
+  div(class=name id='profile' onclick='openScreenshot(this)')
+    img(src='/assets/screenshots/abram-3.jpg' alt='Abram Profile')
+
 append content
   script.
-    document.addEventListener('keyup', onkeyup)
-
-    function onkeyup(e)
+     document.addEventListener('keyup', function(e)
     {
       if (e.code === 'Escape')
         closeScreenshot();
-    }
+    })
 
-    function openScreenshot(url)
+    function openScreenshot(e)
     {
-      const wrapper = document.querySelector('.screenshot.wrapper');
-      const container = document.querySelector('.screenshot.container');
+      const elem = document.querySelector('.screenshot.wrapper');
 
-      container.children[0].src = url;
-
-      if (!wrapper.classList.contains('active'))
-        requestAnimationFrame(() => wrapper.classList.add('active'));
+      if (!elem.classList.contains('active'))
+      {
+        location.hash = '#' + e.id;
+        elem.classList.add('active');
+      }
     }
 
     function closeScreenshot()
     {
-      const wrapper = document.querySelector('.screenshot.wrapper');
-      const container = document.querySelector('.screenshot.container');
+      const elem = document.querySelector('.screenshot.wrapper');
 
-      if (wrapper.classList.contains('active'))
-        wrapper.classList.remove('active');
-
-      setTimeout(() => container.children[0].src = '', 250);
+      if (elem.classList.contains('active'))
+        elem.classList.remove('active');
     }
 
   .screenshot.wrapper(onclick='closeScreenshot()')
     .screenshot.container
-      img(alt='Screenshot')
+      +screenshots
 
   .projects.container
     .project.container
@@ -87,14 +92,7 @@ append content
         hr
 
         .project.screenshots
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/abram-1.jpg\')')
-            img(src='/assets/screenshots/abram-1.jpg' alt='Abram Inbox')
-
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/abram-2.jpg\')')
-            img(src='/assets/screenshots/abram-2.jpg' alt='Abram Chat')
-
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/abram-3.jpg\')')
-            img(src='/assets/screenshots/abram-3.jpg' alt='Abram Profile')
+          +screenshots('project screenshot')
 
         hr
         br

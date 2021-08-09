@@ -15,43 +15,59 @@ append head
   link(rel='stylesheet' href='../styles/icons.css')
   link(rel='stylesheet' href='../styles/project.css')
 
+mixin screenshots(name)
+  div(class=name id='winner' onclick='openScreenshot(this)')
+    picture
+      source(srcset='/assets/screenshots/airtegal-dark-1.png' media='(prefers-color-scheme: dark)')
+      img(src='/assets/screenshots/airtegal-light-1.png' alt='Airtegal Round Winner - Landscape')
+
+  div(class=name id='winner-alt' onclick='openScreenshot(this)')
+    picture
+      source(srcset='/assets/screenshots/airtegal-dark-2.png' media='(prefers-color-scheme: dark)')
+      img(src='/assets/screenshots/airtegal-light-2.png' alt='Airtegal Round Winner - Portrait')
+
+  div(class=name id='picking' onclick='openScreenshot(this)')
+    picture
+      source(srcset='/assets/screenshots/airtegal-dark-3.png' media='(prefers-color-scheme: dark)')
+      img(src='/assets/screenshots/airtegal-light-3.png' alt='Airtegal Picking Phase - Landscape')
+
+  div(class=name id='writing' onclick='openScreenshot(this)')
+    picture
+      source(srcset='/assets/screenshots/airtegal-dark-4.png' media='(prefers-color-scheme: dark)')
+      img(src='/assets/screenshots/airtegal-light-4.png' alt='Airtegal Writing Phase - Portrait')
+
 append content
   script.
-    var mode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    var mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-    document.addEventListener('keyup', onkeyup)
-
-    function onkeyup(e)
+    document.addEventListener('keyup', function(e)
     {
       if (e.code === 'Escape')
         closeScreenshot();
-    }
+    })
 
-    function openScreenshot(url)
+    function openScreenshot(e)
     {
-      const wrapper = document.querySelector('.screenshot.wrapper');
-      const container = document.querySelector('.screenshot.container');
+      const elem = document.querySelector('.screenshot.wrapper');
 
-      container.children[0].src = url.replace('$mode', mode);
-
-      if (!wrapper.classList.contains('active'))
-        requestAnimationFrame(() => wrapper.classList.add('active'));
+      if (!elem.classList.contains('active'))
+      {
+        location.hash = '#' + e.id;
+        elem.classList.add('active');
+      }
     }
 
     function closeScreenshot()
     {
-      const wrapper = document.querySelector('.screenshot.wrapper');
-      const container = document.querySelector('.screenshot.container');
+      const elem = document.querySelector('.screenshot.wrapper');
 
-      if (wrapper.classList.contains('active'))
-        wrapper.classList.remove('active');
-
-      setTimeout(() => container.children[0].src = '', 250);
+      if (elem.classList.contains('active'))
+        elem.classList.remove('active');
     }
 
   .screenshot.wrapper(onclick='closeScreenshot()')
     .screenshot.container
-      img(alt='Screenshot')
+      +screenshots
 
   .projects.container
     .project.container
@@ -109,25 +125,7 @@ append content
 
         hr
         .project.screenshots
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-$mode-1.png\')')
-            picture()
-              source(srcset='/assets/screenshots/airtegal-dark-1.png' media='(prefers-color-scheme: dark)')
-              img(src='/assets/screenshots/airtegal-light-1.png' alt='Airtegal Picking Phase - Landscape')
-
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-$mode-2.png\')')
-            picture
-              source(srcset='/assets/screenshots/airtegal-dark-2.png' media='(prefers-color-scheme: dark)')
-              img(src='/assets/screenshots/airtegal-light-2.png' alt='Airtegal Round Winner - Landscape')
-
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-$mode-3.png\')')
-            picture
-              source(srcset='/assets/screenshots/airtegal-dark-3.png' media='(prefers-color-scheme: dark)')
-              img(src='/assets/screenshots/airtegal-light-3.png' alt='Airtegal Round Winner - Portrait')
-
-          .project.screenshot(onclick='openScreenshot(\'/assets/screenshots/airtegal-$mode-4.png\')')
-            picture
-              source(srcset='/assets/screenshots/airtegal-dark-4.png' media='(prefers-color-scheme: dark)')
-              img(src='/assets/screenshots/airtegal-light-4.png' alt='Airtegal Writing Phase - Portrait')
+          +screenshots('project screenshot')
 
         hr
         br
