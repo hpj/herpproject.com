@@ -4,7 +4,7 @@ append head
   title Abram by Herp Project
 
   meta(name='title' content='Abram by Herp Project')
-  meta(name='description' content='An app about friendships.')
+  meta(name='description' content='Love, Friendship, and everything sweet.')
 
   meta(property='og:type' content='website')
   meta(property='og:title' content='Abram by Herp Project')
@@ -15,46 +15,46 @@ append head
   link(rel='stylesheet' href='../styles/icons.css')
   link(rel='stylesheet' href='../styles/project.css')
 
-mixin screenshots(name)
-  div(class=name id='inbox' onclick='openScreenshot(this)')
-    img(src='/assets/screenshots/abram-1.jpg' alt='Abram Inbox')
+//- mixin screenshots(name)
+//-   div(class=name id='inbox' onclick='openScreenshot(this)')
+//-     img(src='/assets/screenshots/abram-1.jpg' alt='Abram Inbox')
 
-  div(class=name id='chat' onclick='openScreenshot(this)')
-    img(src='/assets/screenshots/abram-2.jpg' alt='Abram Chat')
+//-   div(class=name id='chat' onclick='openScreenshot(this)')
+//-     img(src='/assets/screenshots/abram-2.jpg' alt='Abram Chat')
 
-  div(class=name id='profile' onclick='openScreenshot(this)')
-    img(src='/assets/screenshots/abram-3.jpg' alt='Abram Profile')
+//-   div(class=name id='profile' onclick='openScreenshot(this)')
+//-     img(src='/assets/screenshots/abram-3.jpg' alt='Abram Profile')
 
 append content
-  script.
-     document.addEventListener('keyup', function(e)
-    {
-      if (e.code === 'Escape')
-        closeScreenshot();
-    })
+  //- script.
+  //-    document.addEventListener('keyup', function(e)
+  //-   {
+  //-     if (e.code === 'Escape')
+  //-       closeScreenshot();
+  //-   })
 
-    function openScreenshot(e)
-    {
-      const elem = document.querySelector('.screenshot.wrapper');
+  //-   function openScreenshot(e)
+  //-   {
+  //-     const elem = document.querySelector('.screenshot.wrapper');
 
-      if (!elem.classList.contains('active'))
-      {
-        location.hash = '#' + e.id;
-        elem.classList.add('active');
-      }
-    }
+  //-     if (!elem.classList.contains('active'))
+  //-     {
+  //-       location.hash = '#' + e.id;
+  //-       elem.classList.add('active');
+  //-     }
+  //-   }
 
-    function closeScreenshot()
-    {
-      const elem = document.querySelector('.screenshot.wrapper');
+  //-   function closeScreenshot()
+  //-   {
+  //-     const elem = document.querySelector('.screenshot.wrapper');
 
-      if (elem.classList.contains('active'))
-        elem.classList.remove('active');
-    }
+  //-     if (elem.classList.contains('active'))
+  //-       elem.classList.remove('active');
+  //-   }
 
   .screenshot.wrapper(onclick='closeScreenshot()')
-    .screenshot.container
-      +screenshots
+    //- .screenshot.container
+    //-   +screenshots
 
   .projects.container
     .project.container
@@ -79,10 +79,14 @@ append content
 
         hr
 
-        .project.screenshots
-          +screenshots('project screenshot')
+        //- .project.screenshots
+        //-   +screenshots('project screenshot')
 
         hr
         br
         p
           | This project is referred to internally as "Ibrahim". it's the second app to had been named after a Prophet in Islam.
+        br
+        p
+          | The app goes through LOTS of pauses in its development with it being worked on for a few days each 6 months or so because
+          | its not our most important project right now.
