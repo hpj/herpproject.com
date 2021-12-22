@@ -84,15 +84,12 @@
 {
   display: flex;
   flex-wrap: wrap;
-
+  
+  gap: 8px;
   margin: 0 0 15px 0;
+
   transform: scale(0.75);
   transform-origin: 0 50%;
-}
-
-.project.badges > img
-{
-  margin: 0 8px 0 0;
 }
 
 .project.notice

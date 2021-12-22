@@ -19,8 +19,8 @@
 
   border-radius: 5px;
 
+  margin: 25px;
   padding: 25px;
-  margin: 25px 0;
 
   width: auto;
   height: auto;
@@ -45,12 +45,11 @@
   align-items: center;
   justify-content: center;
 
-  width: 100%;
-  padding: 8px 0;
-  margin: 25px 0;
+  margin: 25px;
+  padding: 8px 25px;
 
-  border: 1px var(--accent) solid;
   border-radius: 5px;
+  border: 1px var(--accent) solid;
 
   text-transform: uppercase;
 }
@@ -67,8 +66,8 @@
 {
   fill: #5865F2;
 
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   margin: 0 25px;
 }
 
