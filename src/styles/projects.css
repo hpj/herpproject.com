@@ -39,6 +39,50 @@
   text-decoration: none;
 }
 
+.banner
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 8px 0;
+  margin: 25px 0;
+
+  border: 1px var(--accent) solid;
+  border-radius: 5px;
+
+  text-transform: uppercase;
+}
+
+.banner.discord 
+{
+  color: #5865F2;
+  border-color: #5865F2;
+
+  font-weight: 700;
+}
+
+.banner.discord > svg
+{
+  fill: #5865F2;
+
+  width: 16px;
+  height: 16px;
+  margin: 0 25px;
+}
+
+.banner.discord:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #5865F2;
+}
+
+.banner.discord:hover > svg
+{
+  fill: #FFFFFF;
+}
+
 .project.circle
 {
   grid-area: circle;
