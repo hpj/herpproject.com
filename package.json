@@ -4,16 +4,17 @@
   "private": true,
   "scripts": {
     "sprite": "svgo --config ./svgo.config.js -f ./assets && echo $(svgstore ./assets/*.svg) > build/icons.svg",
-    "start": "yarn sprite && cp -r public/* build && npx copy-and-watch --watch src/styles/*.css build/styles & yarn pug src --out build --pretty --watch & yarn serve build",
+    "start": "yarn sprite && cp -r public/* build && concurrently \"npx copy-and-watch --watch src/styles/*.css build/styles\" \"yarn pug src --out build --pretty --watch\" \"yarn hot-server --port=3000 --dir=build\"",
     "build": "rm -rf ./build && mkdir ./build && yarn sprite && cp -r src/styles build && cp -r public/* build && yarn pug src --out build"
   },
   "devDependencies": {
+    "concurrently": "^6.5.1",
     "copy-and-watch": "^0.1.6",
+    "hot-server": "^0.0.25",
     "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.6.0",
     "pug-lint-config-clock": "^2.0.0",
-    "serve": "^13.0.2",
     "svgo": "^2.8.0",
     "svgstore-cli": "^2.0.1"
   }
