@@ -3,20 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf ./build && mkdir ./build",
-    "svgo": "svgo --config='{ \"plugins\": [ { \"removeAttrs\": { \"attrs\": \"(fill|stroke)\" } }, { \"removeViewBox\": false } ] }' ./assets",
-    "sprite": "echo $(svgstore ./assets/*.svg) > build/icons.svg",
-    "start": "npm run sprite & npx copy-and-watch --watch src/styles/*.css build/styles & cp -r public/* build & npx pug src --out build --pretty --watch & npx serve build",
-    "build": "npm run clean && npm run svgo && npm run sprite && cp -r src/styles build && cp -r public/* build && npx pug src --out build"
+    "sprite": "svgo --config ./svgo.config.js -f ./assets && echo $(svgstore ./assets/*.svg) > build/icons.svg",
+    "start": "yarn sprite && cp -r public/* build && npx copy-and-watch --watch src/styles/*.css build/styles & yarn pug src --out build --pretty --watch & yarn serve build",
+    "build": "rm -rf ./build && mkdir ./build && yarn sprite && cp -r src/styles build && cp -r public/* build && yarn pug src --out build"
   },
   "devDependencies": {
-    "copy-and-watch": "^0.1.5",
+    "copy-and-watch": "^0.1.6",
     "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.6.0",
     "pug-lint-config-clock": "^2.0.0",
-    "serve": "^12.0.0",
-    "svgo": "^1.3.2",
-    "svgstore-cli": "^2.0.0"
+    "serve": "^13.0.2",
+    "svgo": "^2.8.0",
+    "svgstore-cli": "^2.0.1"
   }
 }
