@@ -4,10 +4,10 @@ module.exports = {
       name: "preset-default",
       params: {
         overrides: {
-          removeViewBox: false,
+          removeViewBox: false
         },
       },
     },
-    { name: "removeAttrs", params: { attrs: "(fill|stroke)" } },
-  ],
+    { name: "removeAttrs", params: { attrs: "(fill|stroke)" } }
+  ]
 };
