@@ -1,0 +1,89 @@
+extends ../layout.pug
+
+append head
+  title guh! by Herp Project
+
+  meta(name='title' content='guh! by Herp Project')
+  meta(name='description' content='Highly capable and easy-to-use vtuber app.')
+
+  meta(property='og:type' content='website')
+  meta(property='og:title' content='guh! by Herp Project')
+  meta(property='og:description' content='Highly capable and easy-to-use vtuber app.')
+  meta(property='og:image' content='https://herpproject.com/assets/card-guh.png')
+
+  link(rel='stylesheet' href='../styles/body.css')
+  link(rel='stylesheet' href='../styles/icons.css')
+  link(rel='stylesheet' href='../styles/project.css')
+
+//- mixin screenshots(name)
+//-   div(class=name id='tracks' onclick='openScreenshot(this)')
+//-     img(src='/assets/screenshots/dawayer-1.png' alt='Dawayer Tracks Menu')
+
+//-   div(class=name id='artists' onclick='openScreenshot(this)')
+//-     img(src='/assets/screenshots/dawayer-2.png' alt='Dawayer Artists Menu')
+
+//-   div(class=name id='playing' onclick='openScreenshot(this)')
+//-     img(src='/assets/screenshots/dawayer-3.png' alt='Dawayer Now Playing')
+
+append content
+  //- script.
+  //-   document.addEventListener('keyup', function(e)
+  //-   {
+  //-     if (e.code === 'Escape')
+  //-       closeScreenshot();
+  //-   })
+
+  //-   function openScreenshot(e)
+  //-   {
+  //-     const elem = document.querySelector('.screenshot.wrapper');
+
+  //-     if (!elem.classList.contains('active'))
+  //-     {
+  //-       location.hash = '#' + e.id;
+  //-       elem.classList.add('active');
+  //-     }
+  //-   }
+
+  //-   function closeScreenshot()
+  //-   {
+  //-     const elem = document.querySelector('.screenshot.wrapper');
+
+  //-     if (elem.classList.contains('active'))
+  //-       elem.classList.remove('active');
+  //-   }
+
+  //- .screenshot.wrapper(onclick='closeScreenshot()')
+  //-   .screenshot.container
+  //-     +screenshots
+
+  .projects.container
+    .project.container
+      .project.circle
+        +icon('guh')
+      .project.card
+        p guh!
+        .project.tags #Open Source
+      .project.notice
+        //- .project.badges
+          //- img(src='https://codecov.io/gh/hpj/Abram/branch/development/graph/badge.svg?token=J6HRUQ2VTR' alt='Frontend Code Coverage' title='Frontend Coverage')
+        p Coming Soon
+      .project.info
+        p In development since January, 2022.
+        br
+        p Highly capable and easy-to-use vtuber app to animate and stream your characters.
+
+        .project.links
+        //-   a.project.link(href='https://github.com/hpj/guh')
+        //-     +icon('github')
+        //-     p GitHub
+
+        //- hr
+        //- .project.screenshots
+        //-   +screenshots('project screenshot')
+
+        hr
+        br
+        p
+          | This project is named after the talented  
+          a(href='https://www.youtube.com/channel/UCL_qhgtOy0dy1Agp8vkySQg') Mori Calliope
+          | .
