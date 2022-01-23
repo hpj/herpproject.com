@@ -41,15 +41,15 @@ append content
         br
         p Welcome to a world that makes no sense.
 
-    a.project.container(href='./abram')
-      .project.circle
-        +icon('abram')
-      .project.card
-        p Abram
-      .project.info
-        p Coming Soon
-        br
-        p An upcoming messaging app.
+    //- a.project.container(href='./abram')
+    //-   .project.circle
+    //-     +icon('abram')
+    //-   .project.card
+    //-     p Abram
+    //-   .project.info
+    //-     p Coming Soon
+    //-     br
+    //-     p An upcoming messaging app.
 
     a.project.container(href='./guh')
       .project.circle
@@ -59,6 +59,16 @@ append content
       .project.info
         p Coming Soon
 
+    a.project.container(href='./tssf')
+      .project.circle
+        +icon('question-mark')
+      .project.card
+        p The Story So Far
+      .project.info
+        p Canceled.
+        br
+        p The Story So Far was supposed to be an episodic adventure game based on 4 different original stories in the same world.
+    
     a.project.container(href='./dawayer')
       .project.circle
         +icon('dawayer')
@@ -78,13 +88,3 @@ append content
         p Canceled.
         br
         p Fabric was a high-performance vector graphics drawing library, built to push the limits 2-d video games by rendering them in real-time vector graphics.
-
-    .project.container.inactive
-      .project.circle
-        +icon('question-mark')
-      .project.card
-        p The Story So Far
-      .project.info
-        p Canceled.
-        br
-        p Powered by Fabric; The Story So Far was supposed to be an episodic adventure game based on 4 different original stories in the same world.
