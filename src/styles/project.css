@@ -3,7 +3,8 @@
   color: var(--foreground);
 
   max-width: 600px;
-  margin: 4vh auto;
+  padding: 0 0 1vh 0;
+  margin: 0 auto;
 }
 
 .screenshot.wrapper

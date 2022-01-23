@@ -9,8 +9,9 @@
 
   font-size: calc(6px + 0.4vw + 0.4vh);
 
-  padding: 0 10vw;
-  margin: 4vh auto;
+  padding: 4vh 10vw;
+
+  margin: 0 auto;
 }
 
 .about.text > p
