@@ -4,7 +4,7 @@ append head
   title Alley Cats by Herp Project
 
   meta(name='title' content='Alley Cats by Herp Project')
-  meta(name='description' content='Another tabletop roleplaying game.')
+  meta(name='description' content='A Egyptian parody of tabletop roleplaying games like Dungeons & Dragons.')
 
   meta(property='og:type' content='website')
   meta(property='og:title' content='Alley Cats by Herp Project')
@@ -15,41 +15,7 @@ append head
   link(rel='stylesheet' href='../styles/icons.css')
   link(rel='stylesheet' href='../styles/project.css')
 
-mixin screenshots(name)
-  div(class=name id='inbox' onclick='openScreenshot(this)')
-    img(src='/assets/screenshots/alleycats-1.png' alt='Alley Cats Adai Set')
-
 append content
-  script.
-     document.addEventListener('keyup', function(e)
-    {
-      if (e.code === 'Escape')
-        closeScreenshot();
-    })
-
-    function openScreenshot(e)
-    {
-      const elem = document.querySelector('.screenshot.wrapper');
-
-      if (!elem.classList.contains('active'))
-      {
-        location.hash = '#' + e.id;
-        elem.classList.add('active');
-      }
-    }
-
-    function closeScreenshot()
-    {
-      const elem = document.querySelector('.screenshot.wrapper');
-
-      if (elem.classList.contains('active'))
-        elem.classList.remove('active');
-    }
-
-  .screenshot.wrapper(onclick='closeScreenshot()')
-    .screenshot.container
-      +screenshots
-
   .projects.container
     .project.container
       .project.circle
@@ -60,7 +26,7 @@ append content
       .project.info
         p Welcome to a world that makes no sense.
         br
-        p Alley Cats is our spin on a tabletop roleplaying games.
+        p Alley Cats is an Egyptian parody of tabletop roleplaying games like Dungeons & Dragons.
         br
         p Each campaign we play will be unique in its own way, set in a different time and place, with its own 
           strong original 
@@ -71,12 +37,14 @@ append content
             +icon('youtube')
             p Playlist
 
-        //- hr
-        //- .project.screenshots
-        //-   +screenshots('project screenshot')
+        hr
+        .project.screenshots
+          iframe(width='100%', height='100%' src='https://www.youtube-nocookie.com/embed/iy3nhLdP2V4' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
 
+        br
         hr
         br
         p
           | What's great about games like Alley Cats is that with a good GM you can do anything to think of,
           | You have freedom you won't have in regular video games.
+        
