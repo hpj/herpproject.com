@@ -4,6 +4,9 @@ mixin icon(name)
   svg.icon(class=name)
     use(xlink:href=`/icons.svg#${name}`)
 
+mixin iconText(text)
+  p.icon.text=text
+
 mixin iconLink(name, link)
   a(href=link)
     svg.icon.link(class=name)
@@ -26,7 +29,7 @@ html(lang='en')
       .links.container
         +iconLink('github', 'https://github.com/hpj')
         +iconLink('twitter', 'https://www.twitter.com/herpproject')
-        +iconLink('discord', '/discord')
+        //- +iconLink('discord', '/discord')
         +iconLink('youtube', 'https://youtube.com/channel/UCb5CUVUiD04nNluXVkmF6Pg')
         //- +iconLink('facebook', 'https://www.facebook.com/herpproject')
         //- +iconLink('twitch', 'https://www.twitch.tv/herpproject')
