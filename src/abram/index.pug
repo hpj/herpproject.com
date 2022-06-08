@@ -1,0 +1,84 @@
+extends ../layout.pug
+
+append head
+  title Abram by Herp Project
+
+  meta(name='title' content='Abram by Herp Project')
+  meta(name='description' content='Love, Friendship, and everything sweet.')
+
+  meta(property='og:type' content='website')
+  meta(property='og:title' content='Abram by Herp Project')
+  meta(property='og:description' content='Love, Friendship, and everything sweet.')
+  meta(property='og:image' content='https://herpproject.com/assets/card-abram.png')
+
+  link(rel='stylesheet' href='../styles/body.css')
+  link(rel='stylesheet' href='../styles/icons.css')
+  link(rel='stylesheet' href='../styles/project.css')
+
+mixin screenshots(name)
+  div(class=name id='inbox' onclick='openScreenshot(this)')
+    img(src='/assets/screenshots/abram-1.jpg' alt='Abram Inbox')
+
+  div(class=name id='chat' onclick='openScreenshot(this)')
+    img(src='/assets/screenshots/abram-2.jpg' alt='Abram Chat')
+
+  div(class=name id='profile' onclick='openScreenshot(this)')
+    img(src='/assets/screenshots/abram-3.jpg' alt='Abram Profile')
+
+append content
+  script.
+     document.addEventListener('keyup', function(e)
+    {
+      if (e.code === 'Escape')
+        closeScreenshot();
+    })
+
+    function openScreenshot(e)
+    {
+      const elem = document.querySelector('.screenshot.wrapper');
+
+      if (!elem.classList.contains('active'))
+      {
+        location.hash = '#' + e.id;
+        elem.classList.add('active');
+      }
+    }
+
+    function closeScreenshot()
+    {
+      const elem = document.querySelector('.screenshot.wrapper');
+
+      if (elem.classList.contains('active'))
+        elem.classList.remove('active');
+    }
+
+  .screenshot.wrapper(onclick='closeScreenshot()')
+    .screenshot.container
+      +screenshots
+
+  .projects.container
+    .project.container
+      .project.circle
+        +icon('abram')
+      .project.card
+        p Abram
+        .project.tags #React Native #Serverless #AWS LAMBDA #Jest
+      .project.info
+        p Development started in February, 2020.
+        p Canceled In March, 2022.
+        br
+        p Abram was going to be a messaging application focussed on offering the best possible user experience without any pollution.
+
+        .project.links
+
+        hr
+        .project.screenshots
+          +screenshots('project screenshot')
+
+        hr
+        br
+        p This project is referred to internally as "Ibrahim". it's the second app to had been named after a Prophet in Islam.
+        br
+        p The app went through a lot of long pauses in its development, with it being worked on for a few days each 8 months or so. And it was finally canceled in March of 2022.
+        br
+        p It was canceled mainly because our team lost the motivation that we had for it when we first started the project. But we also highly doubted that we could grow in such a saturated market.
